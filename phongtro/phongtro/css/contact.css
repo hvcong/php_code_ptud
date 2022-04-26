@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --one-color: #d0e1f9;
+    --second-color: #4d648d;
+    --third-color: #283655;
+    --fourth-color: #1e1f26;
+    --transition-fast: all 0.2s ease;
+    --transition-slow: all 0.5s ease;
+    --footer-background-color: #52525c;
+    --footer-text-color: #a9b3bb;
+}
+
+html {
+    font-size: 16px;
+}
+
+.contact__container {
+    padding: 0px !important;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+    padding: 12px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    color: var(--third-color);
+}
+
+.section__title::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    background-color: rgb(233, 190, 125);
+}
+
+.contact__container {
+    padding: 0;
+}
+
+
+/* main */
+
+.contact__infor-container {
+    background-color: #bfd6f0;
+    padding-top: 36px;
+}
+
+.contact__infor {
+    padding-top: 36px;
+}
+
+.contact__infor-left {}
+
+.contact__infor-right {}
+
+.contact__infor-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 32px;
+}
+
+.contact__infor-group-icon {
+    font-size: 56px;
+    color: rgb(226, 174, 62);
+}
+
+.contact__infor-title {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 0 4px;
+    text-transform: uppercase;
+}
+
+.contact__infor-des {
+    text-align: center;
+}
+
+.contact__form-container {
+    padding: 36px 0;
+}
+
+.space-36 {
+    padding-top: 36px;
+}
+
+.contact__form {
+    max-width: 500px;
+    /* border: 1px solid #ddd; */
+}
+
+.contact__form-group {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 12px;
+    background-color: white;
+}
+
+.contact__form-input {
+    outline: none;
+    border: none;
+    padding-left: 8px;
+}
+
+.contact__form-textarea {
+    width: 100%;
+}
+
+.contact__img {
+    width: 100%;
+}

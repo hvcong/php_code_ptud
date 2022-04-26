@@ -1,0 +1,473 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --one-color: #d0e1f9;
+    --second-color: #4d648d;
+    --third-color: #283655;
+    --fourth-color: #1e1f26;
+    --transition-fast: all 0.2s ease;
+    --transition-slow: all 0.5s ease;
+    --footer-background-color: #52525c;
+    --footer-text-color: #a9b3bb;
+}
+
+html {
+    font-size: 16px;
+}
+
+.home__container {
+    padding: 0 !important;
+    background-color: var(--one-color);
+}
+
+
+/* header */
+
+.header__container {
+    background-color: var(--second-color);
+}
+
+.header__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 24px;
+    flex-shrink: 2;
+}
+
+.logo__img {
+    width: 100%;
+}
+
+
+/* menu */
+
+.menu__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__item {}
+
+.menu__item-link {
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 16px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+}
+
+.menu__item-link:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: var(--transition-fast);
+    font-weight: bold;
+}
+.menu__item-link1:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: var(--transition-fast);
+    font-weight: bold;
+}
+
+.menu__item-link.active {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+/* account */
+
+.account__container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.account__container .account__icon {
+    font-size: 20px;
+    color: white;
+}
+
+.account__list {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    box-shadow: 0px 3px 6px #ddd;
+    padding: 8px 0;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    display: none;
+    z-index: 10;
+}
+
+.account__container:hover .account__list {
+    display: block;
+}
+
+.account__list::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: -15px;
+}
+
+.arrow-top::before {
+    content: "";
+    position: absolute;
+    border: 12px solid transparent;
+    border-bottom-color: rgb(255, 255, 255);
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 10px;
+    z-index: 1;
+}
+
+.account__item {
+    display: flex;
+    direction: row;
+    padding: 6px 12px;
+}
+
+.account__item-icon {
+    margin-right: 24px;
+}
+
+.account__item:hover {
+    color: var(--second-color);
+    transition: var(--transition-fast);
+    background-color: #ddd;
+}
+
+
+/* banner */
+
+.banner {
+    position: relative;
+    height: 500px;
+    background-image: url(../images/slider-bg.png);
+    background-size: cover;
+}
+
+.banner__text {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner__title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--third-color);
+}
+
+.banner__des {
+    font-weight: 500;
+    color: var(--third-color);
+}
+
+
+/* end of header */
+
+
+/* main */
+
+.main {
+    background-color: white;
+}
+
+.section__container {
+    padding: 36px 0;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+    padding: 12px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    color: var(--third-color);
+}
+
+.section__title::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    background-color: rgb(233, 190, 125);
+}
+
+.builds__body {
+    padding: 36px 0;
+    cursor: pointer;
+}
+
+
+/* build */
+
+.build {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 6px rgb(189, 186, 186);
+    position: relative;
+}
+
+.build:hover {
+    top: -2px;
+    transition: var(--transition-fast);
+}
+
+.build__top {
+    position: relative;
+}
+
+.build__top-img {
+    width: 100%;
+}
+
+.build__top-status {
+    position: absolute;
+    padding: 4px 8px;
+    background-color: rgb(121, 230, 20);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    top: 8px;
+    left: 12px;
+    box-shadow: 1px 1px 3px #7b7d81;
+}
+
+.build__top-status-empty {
+    background-color: rgb(207, 48, 37);
+}
+
+.build__top-favorite {
+    position: absolute;
+    top: 4px;
+    right: 24px;
+    font-size: 28px;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.build__top-favorite.active i {
+    color: rgb(226, 32, 32);
+}
+
+.build__top-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    opacity: 0;
+    transition: var(--transition-slow);
+}
+
+.build:hover .build__top-link {
+    opacity: 1;
+}
+
+.build__top-link-icon {}
+
+.build__top-link-text {}
+
+.build__body {
+    padding: 8px 20px;
+}
+
+.build__body-name-value {
+    font-weight: 500;
+    color: rgb(83, 82, 82);
+}
+
+.build__body-address {
+    padding: 8px 0;
+}
+
+.build__body-address-value {
+    font-weight: 500;
+    color: rgb(83, 82, 82);
+}
+
+.build__body-label {
+    display: inline-block;
+    padding-right: 8px;
+    color: rgb(136, 132, 132);
+}
+
+.build__body-price-num {
+    font-weight: 500;
+    color: rgb(83, 82, 82);
+}
+
+.build__body-price-sub {
+    font-weight: 500;
+    color: rgb(83, 82, 82);
+}
+
+
+/* introduce section */
+
+.introduce__container {
+    background-image: url(https://img.cenhomes.vn/location-district-bg2.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.introduce__title {
+    color: white;
+}
+
+.introduce__body {
+    padding-top: 36px;
+}
+
+.introduce__body-left {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.introduce__body-img-group {
+    display: flex;
+}
+
+.introduce__body-img {
+    width: 220px;
+    padding: 2px;
+}
+
+.introduce__body-right {}
+
+.introduce__body-title {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 24px 0 28px;
+}
+
+.introduce__body-des {
+    font-weight: 500;
+    color: rgb(207, 206, 206);
+    padding-bottom: 24px;
+}
+
+.introduce__body-btn {
+    padding: 4px 16px;
+    background-color: rgb(201, 148, 52);
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    text-decoration: none;
+    color: white;
+}
+
+.introduce__body-btn:hover {
+    opacity: 1;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(228, 173, 71);
+}
+
+
+/* services section */
+
+.services__container {}
+
+.services__list {
+    padding: 36px 0;
+}
+
+.service {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 32px;
+}
+
+.service__left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service__icon {
+    font-size: 40px;
+    color: #c29416;
+    padding: 8px;
+}
+
+.service__right {
+    flex: 8;
+    padding: 0 32px 0 16px;
+}
+
+.service__title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 12px;
+}
+
+.service__des {
+    font-size: 18px;
+}
+
+
+/* end of main */

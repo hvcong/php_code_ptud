@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --one-color: #d0e1f9;
+    --second-color: #4d648d;
+    --third-color: #283655;
+    --fourth-color: #1e1f26;
+    --transition-fast: all 0.2s ease;
+    --transition-slow: all 0.5s ease;
+
+    --footer-background-color: #52525c;
+    --footer-text-color: #a9b3bb;
+}

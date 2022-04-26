@@ -1,0 +1,33 @@
+<?php	
+include("inc/header.php");
+?>
+<div class="container">
+	<section id="content">
+		<form action="login.php" method="post">
+			<h1>Login</h1>
+            <span><?php
+				if(isset($login_check))
+				{
+					echo $login_check;
+				} 
+			 ?></span>
+			<div>
+				<input type="text" placeholder="Username" required name="adminUser"/>
+			</div>
+			<div>
+				<input type="password" placeholder="Password" required name="adminPass"/>
+			</div>
+			<div>
+				<input type="submit" value="Log in" />
+			</div>
+		</form><!-- form -->
+		<div class="button">
+			<a href="#">Hãy đăng nhập thành viên</a>
+		</div><!-- button -->
+	</section><!-- content -->
+</div><!-- container -->
+
+ <?php
+ include('inc/footer.php');
+ ?>
+

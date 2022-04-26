@@ -1,0 +1,115 @@
+.list-room .build {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.list-room__title {
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding: 12px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    color: var(--third-color);
+}
+
+.list-room .build__top {
+    width: 30%;
+}
+
+.list-room .build__top-status {
+    top: 10px;
+    left: 16px;
+}
+
+.list-room .build__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-room .build__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-xl {
+    max-width: 1140px;
+}
+
+.modal-body .left-info {
+    background-color: #fff;
+}
+
+.info-label {
+    border-radius: 0px;
+    border: none;
+    width: 100px;
+    height: 36px;
+    background-color: #ecf0f1;
+    padding: 6px 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.info-contact > div {
+    padding-left: 12px;
+    color: #2e3339;
+    margin-bottom: 0;
+    background-color: #ecf0f1;
+    line-height: 250%;
+}
+
+.info-contact .contact-label {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-top: 12px;
+}
+
+.room-detail-img {
+    margin: 20px 0 0 15px;
+}
+
+.room-floor {
+    border-radius: 10px;
+    border: 3px solid #385d8a;
+    margin: 0 30px;
+    padding: 25px 10px;
+}
+
+.room-floor .bed > ion-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.room-floor .bed > ion-icon.active {
+    color: red;
+}
+
+.color-label {
+    width: 20px;
+    height: 20px;
+}
+
+.color-group {
+    margin: 0 30px;
+}
+
+.color-group:nth-child(1) > .color-label {
+    background-color: red;
+}
+
+.color-group:nth-child(2) > .color-label {
+    background-color: black;
+}
+
+.room-detail {
+    padding: 20px 15px;
+}
+
+.room-detail__label > h3 {
+    text-transform: uppercase;
+    color: var(--second-color);
+}
